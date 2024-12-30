@@ -1,2 +1,2 @@
-# slider-veryfy-vue3
+# slider-verify-vue3
 一个基于vue3的滑块校验组件
