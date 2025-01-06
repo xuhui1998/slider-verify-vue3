@@ -1,7 +1,7 @@
 {
   "name": "slider-verify-vue3",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "description": "一个基于vue3的滑块校验组件",
   "main": "lib/slider-verify-vue3.es.js",

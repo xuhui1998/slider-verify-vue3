@@ -7,7 +7,8 @@
 </p>
 
 ### 演示地址
-> 
+> [https://xuhui1998.github.io/slider-verify-vue3/demo.html](https://xuhui1998.github.io/slider-verify-vue3/demo.html)
+
 
 <img src="./public/2024-12-27 15.14.31.gif" width="360" />
 
@@ -55,6 +56,10 @@ createApp(App).use(SliderVerify)
 | successTip | String | 验证通过 | 验证成功文案 |
 | sliderColor | String | #f2f2f2 | 滑块的背景色 |
 | fillColor | String | #79ce8e | 拖动后的背景填充色 |
+
+| 方法  | 描述 |
+| --- | --- |
+| onReset | 重置 |
 
 | 事件  | 描述 |
 | --- | --- |

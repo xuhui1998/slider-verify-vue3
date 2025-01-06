@@ -5,25 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slider-Verify</title>
   <link rel="stylesheet" href="./lib/style.css"></link>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
 </head>
+<style>
+  #app {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+  }
+  .model {
+    margin-top: 20px;
+  }
+  .slider-verify-vue3 {
+    width: 50%;
+    margin-right: 100px;
+  }
+  .settings {
+    width: 50%;
+  }
+</style>
 <body>
   <div id="app">
     <div class="slider-verify-vue3">
-      <slider-verify></slider-verify>
+      <slider-verify
+        ref="sliderVerifyRef"
+        v-model="isVerify"
+        :size="size"
+        :width="width"
+        :slider-tip="sliderTip"
+        :success-tip="successTip"
+        :slider-color="sliderColor"
+        :fill-color="fillColor"
+      ></slider-verify>
+      <div class="model">校验结果：{{ isVerify }} <el-button size="small" @click="onReset">重置</el-button></div>
+    </div>
+    <div class="settings">
+      <el-form inline>
+        <el-form-item label="尺寸">
+          <el-radio-group v-model="size">
+            <el-radio-button label="mini"></el-radio-button>
+            <el-radio-button label="small"></el-radio-button>
+            <el-radio-button label="medium"></el-radio-button>
+            <el-radio-button label="large"></el-radio-button>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="宽度">
+          <el-input v-model="width"></el-input>
+        </el-form-item>
+        <el-form-item label="默认提示文案">
+          <el-input v-model="sliderTip"></el-input>
+        </el-form-item>
+        <el-form-item label="校验通过文案">
+          <el-input v-model="successTip"></el-input>
+        </el-form-item>
+        <el-form-item label="滑块的背景色">
+          <el-color-picker v-model="sliderColor"></el-color-picker>
+        </el-form-item>
+        <el-form-item label="拖动填充色">
+          <el-color-picker v-model="fillColor"></el-color-picker>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </body>
 <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
 <script src="./lib/slider-verify-vue3.umd.js"></script>
+<script src="https://unpkg.com/element-plus"></script>
 <script>
   const SliderVerify = SliderVerifyVue3.default;
   const app = Vue.createApp({
     data() {
       return {
-        message: 'Hello, Vue 3!',
+        isVerify: false,
+        size: 'medium',
+        width: '100%',
+        sliderTip: '请按住滑块拖动',
+        successTip: '验证通过',
+        sliderColor: '#f2f2f2',
+        fillColor: '#79ce8e',
       };
     },
+    methods: {
+      onReset() {
+        this.$refs.sliderVerifyRef.onReset();
+      }
+    }
   });
-  app.use(SliderVerify).mount('#app');
+  app.use(SliderVerify).use(ElementPlus).mount('#app');
 </script>
 </html>

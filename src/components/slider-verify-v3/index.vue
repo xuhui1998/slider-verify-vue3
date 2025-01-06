@@ -178,6 +178,12 @@ const startDrag = (event: MouseEvent) => {
   document.addEventListener("mouseup", endDrag);
 };
 
+const onReset = () => {
+  sliderPosition.value = 0;
+  verifyPass.value = false;
+  verifyTips.value = props.sliderTip;
+};
+
 onMounted(() => {
   document.addEventListener("mousemove", onDrag);
   document.addEventListener("mouseup", endDrag);
@@ -186,6 +192,12 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener("mousemove", onDrag);
   document.removeEventListener("mouseup", endDrag);
+});
+
+defineExpose({
+  onReset,
+  modelValue: verifyPass.value,
+  sliderContainer,
 });
 
 defineOptions({
@@ -212,7 +224,6 @@ defineOptions({
   .slider-thumb {
     width: 24px;
     height: 24px;
-    position: relative;
   }
 }
 
