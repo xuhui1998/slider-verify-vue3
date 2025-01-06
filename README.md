@@ -1,5 +1,14 @@
 一个基于vue3的滑块校验组件.
 
+<p>
+  <a href="https://github.com/xuhui1998/slider-verify-vue3" target="_black">
+    <img src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Fxuhui1998%2Fslider-verify-vue3?style=flat-square&logo=github&label=slider-verify-vue3" />
+  </a>
+</p>
+
+### 演示地址
+> 
+
 <img src="./public/2024-12-27 15.14.31.gif" width="360" />
 
 1. 安装插件

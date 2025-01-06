@@ -13,7 +13,7 @@ export default defineConfig({
       name: "SliderVerifyVue3",
       cssFileName: "style",
       fileName: (format) => `slider-verify-vue3.${format}.js`,
-      // formats: ["es", "umd", 'cjs'],
+      formats: ["es", "umd", 'cjs', 'iife'],
     },
     rollupOptions: {
       // 确保外部化处理那些
