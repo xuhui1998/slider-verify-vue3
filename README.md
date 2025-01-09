@@ -57,9 +57,11 @@ createApp(App).use(SliderVerify)
 | sliderColor | String | #f2f2f2 | 滑块的背景色 |
 | fillColor | String | #79ce8e | 拖动后的背景填充色 |
 
+
 | 方法  | 描述 |
 | --- | --- |
 | onReset | 重置 |
+
 
 | 事件  | 描述 |
 | --- | --- |
