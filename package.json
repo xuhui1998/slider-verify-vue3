@@ -1,0 +1,51 @@
+{
+  "name": "slider-verify-vue3",
+  "private": false,
+  "version": "1.0.8",
+  "type": "module",
+  "description": "一个基于vue3的滑块校验组件",
+  "main": "lib/slider-verify-vue3.es.js",
+  "module": "lib/slider-verify-vue3.es.js",
+  "style": "lib/style.css",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build-publish": "vite build --config ./vite.config.prod.ts",
+    "preview": "vite preview"
+  },
+  "files": [
+    "lib",
+    "public",
+    "README.md"
+  ],
+  "exports": {
+    "./lib/style.css": "./lib/style.css",
+    ".": {
+      "import": "./lib/slider-verify-vue3.es.js",
+      "require": "./lib/slider-verify-vue3.umd.js"
+    }
+  },
+  "keywords": [
+    "slider",
+    "vue-slider",
+    "vue-slider-verify",
+    "slider-verify-vue3",
+    "滑块校验"
+  ],
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "author": "xuhui666",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/vue-router": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/runtime-core": "^3.5.13",
+    "@vue/runtime-dom": "^3.5.13",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.2.0"
+  }
+}
